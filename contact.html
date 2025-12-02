@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Fashion Shop 2025</title>
+  <meta name="description" content="Contact Fashion Shop 2025 — demo contact form with client-side validation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Fashion Shop 2025 homepage"><img src="https://via.placeholder.com/160x48?text=LOGO" alt="Fashion Shop 2025 logo"></a>
+      <button id="menuToggleContact" class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">☰</button>
+      <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="shop.html">shop</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html" aria-current="page">contact</a></li>
+          <li><a href="cart.html">cart (<span id="cartCountContact">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Contact Us</h1>
+    <p>If you have questions about the demo site, submit the form below or email <a href="mailto:info@example.com">info@example.com</a>.</p>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <div class="form-row">
+        <label for="fullName">Full Name</label>
+        <input id="fullName" name="fullName" type="text" required aria-required="true" minlength="2">
+        <span class="error" id="err-name" aria-live="polite"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="emailAddr">Email</label>
+        <input id="emailAddr" name="email" type="email" required aria-required="true">
+        <span class="error" id="err-email" aria-live="polite"></span>
+      </div>
+
+      <div class="form-row">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required aria-required="true" minlength="10"></textarea>
+        <span class="error" id="err-message" aria-live="polite"></span>
+      </div>
+
+      <div class="form-row">
+        <button type="submit" class="btn">Send message</button>
+        <button type="reset" class="btn alt">Reset</button>
+      </div>
+
+      <div id="formSuccess" class="success" role="status" aria-live="polite" hidden>
+        Thank you — your message was submitted (demo only).
+      </div>
+    </form>
+
+    <section aria-labelledby="contactInfo">
+      <h2 id="contactInfo">Contact Info</h2>
+      <ul>
+        <li>Phone: (555) 555-5555 (demo)</li>
+        <li>Email: <a href="mailto:info@example.com">info@example.com</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav aria-label="Footer links">
+        <ul class="footer-links">
+          <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">WCAG</a></li>
+          <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="yearContact"></span> Fashion Shop 2025 — Demo site</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
