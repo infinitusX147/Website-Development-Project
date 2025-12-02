@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shop — Fashion Shop 2025</title>
+  <meta name="description" content="Browse products at Fashion Shop 2025. Filter, search and add demo items to your cart.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Fashion Shop 2025 homepage"><img src="https://via.placeholder.com/160x48?text=LOGO" alt="Fashion Shop 2025 logo"></a>
+      <button id="menuToggleShop" class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">☰</button>
+
+      <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="shop.html" aria-current="page">shop</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="cart.html">cart (<span id="cartCountShop">0</span>)</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Shop</h1>
+
+    <p>Use the grid to view products. Click "Add" to simulate adding items to your cart.</p>
+
+    <section class="product-grid">
+      <ul class="grid-list" id="shopGrid">
+        <!-- reusing same items for demo -->
+        <li class="card" data-title="Denim Jeans" data-price="59" data-id="jeans-01">
+          <img src="https://images.unsplash.com/photo-1520975919166-2b9e3b7f7f3b?w=800&q=60&auto=format&fit=crop" alt="Denim jeans folded on a table">
+          <h3>Denim Jeans</h3>
+          <p class="price">$59.00</p>
+          <button class="btn small" onclick="addToCart({id:'jeans-01',name:'Denim Jeans',price:59})">Add</button>
+        </li>
+
+        <li class="card" data-title="Silk Scarf" data-price="35" data-id="scarf-01">
+          <img src="https://images.unsplash.com/photo-1520975919166-2b9e3b7f7f3b?w=800&q=60&auto=format&fit=crop" alt="Colorful silk scarf">
+          <h3>Silk Scarf</h3>
+          <p class="price">$35.00</p>
+          <button class="btn small" onclick="addToCart({id:'scarf-01',name:'Silk Scarf',price:35})">Add</button>
+        </li>
+
+        <li class="card" data-title="Canvas Tote" data-price="24" data-id="tote-01">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=60&auto=format&fit=crop" alt="Canvas tote bag on display">
+          <h3>Canvas Tote</h3>
+          <p class="price">$24.00</p>
+          <button class="btn small" onclick="addToCart({id:'tote-01',name:'Canvas Tote',price:24})">Add</button>
+        </li>
+
+        <li class="card" data-title="Wool Beanie" data-price="18" data-id="beanie-01">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=60&auto=format&fit=crop" alt="Wool beanie on a mannequin head">
+          <h3>Wool Beanie</h3>
+          <p class="price">$18.00</p>
+          <button class="btn small" onclick="addToCart({id:'beanie-01',name:'Wool Beanie',price:18})">Add</button>
+        </li>
+      </ul>
+    </section>
+
+    <aside class="promo" aria-labelledby="promoTitle">
+      <h2 id="promoTitle">Sub page</h2>
+      <p>Shop the latest trends and seasonal picks.</p>
+      <a class="btn" href="contact.html">Request restock</a>
+    </aside>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav aria-label="Footer links">
+        <ul class="footer-links">
+          <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">WCAG</a></li>
+          <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="yearShop"></span> Fashion Shop 2025 — Demo site</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
