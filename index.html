@@ -1,54 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fashion Shop 2025</title>
-
-    <!-- SEO -->
-    <meta name="description" content="Fashion Shop 2025 - Explore new arrivals, trends, and sample e-commerce design.">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fashion Shop 2025 — Home</title>
+  <meta name="description" content="Fashion Shop 2025 — sample ecommerce site. Browse new arrivals, view product grid, and try the demo cart and contact form." />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
 
-    <!-- HEADER -->
-    <header class="top-header">
-        <div class="logo">LOGO</div>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Fashion Shop 2025 homepage">
+        <img src="https://via.placeholder.com/160x48?text=LOGO" alt="Fashion Shop 2025 logo">
+      </a>
 
-        <nav class="nav-menu" aria-label="Main Navigation">
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="shop.html">shop</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="contact.html">contact</a></li>
-                <li><a href="cart.html">cart</a></li>
-            </ul>
-        </nav>
+      <button id="menuToggle" class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">☰</button>
 
-        <div class="search-box">
-            <input id="searchInput" type="text" placeholder="search" aria-label="Search" />
-        </div>
-    </header>
+      <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="shop.html">shop</a></li>
+          <li><a href="about.html">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="cart.html">cart (<span id="cartCount">0</span>)</a></li>
+        </ul>
+      </nav>
 
-    <!-- ANNOUNCEMENT -->
-    <section class="announcement">
-        <h2>New Arrived Is 2025</h2>
-        <a class="subpage-link" href="shop.html">Shop the latest trends</a>
+      <form id="searchForm" class="search-form" role="search" aria-label="Site search">
+        <label for="searchInput" class="sr-only">Search products</label>
+        <input id="searchInput" type="search" placeholder="Search products" aria-label="Search products">
+        <button type="submit" aria-label="Submit search">🔍</button>
+      </form>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="announcement" aria-labelledby="announceTitle">
+      <h2 id="announceTitle">New Arrived Is 2025</h2>
+      <p>Explore our latest collection for 2025 — curated trends and seasonal picks.</p>
+      <a class="btn" href="shop.html">Shop the latest trends</a>
     </section>
 
-    <!-- MAIN PRODUCT SECTION -->
-    <main class="product-section">
-        <div class="product-image" aria-label="Product Image Placeholder"></div>
+    <section aria-labelledby="featuredHeading" class="featured">
+      <h1 id="featuredHeading">Featured Product</h1>
 
-        <div class="product-info">
-            <h3>Sample Product</h3>
-            <p class="price">$49.99</p>
-            <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
-            <p id="cartMessage" class="cart-message"></p>
+      <div class="product-hero">
+        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55d8c?w=1000&q=60&auto=format&fit=crop" alt="Model wearing new arrival jacket" />
+        <div class="hero-info">
+          <h2>Vegan Leather Jacket</h2>
+          <p class="muted">Lightweight. Water resistant. City-ready.</p>
+          <p class="price">$129.00</p>
+          <button class="btn" onclick="addToCart({id:'jacket-01',name:'Vegan Leather Jacket',price:129})">Add to Cart</button>
         </div>
-    </main>
+      </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section aria-labelledby="gridHeading" class="product-grid">
+      <h2 id="gridHeading">More Products</h2>
+
+      <ul class="grid-list" id="productGrid">
+        <!-- product list items inserted in markup for demo -->
+        <li class="card" data-title="Denim Jeans" data-price="59" data-id="jeans-01">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=60&auto=format&fit=crop" alt="Denim jeans folded on a table">
+          <h3>Denim Jeans</h3>
+          <p class="price">$59.00</p>
+          <button class="btn small" onclick="addToCart({id:'jeans-01',name:'Denim Jeans',price:59})">Add</button>
+        </li>
+
+        <li class="card" data-title="Silk Scarf" data-price="35" data-id="scarf-01">
+          <img src="https://images.unsplash.com/photo-1520975919166-2b9e3b7f7f3b?w=800&q=60&auto=format&fit=crop" alt="Colorful silk scarf">
+          <h3>Silk Scarf</h3>
+          <p class="price">$35.00</p>
+          <button class="btn small" onclick="addToCart({id:'scarf-01',name:'Silk Scarf',price:35})">Add</button>
+        </li>
+
+        <li class="card" data-title="Canvas Tote" data-price="24" data-id="tote-01">
+          <img src="https://images.unsplash.com/photo-1528701800484-9f0f9b5e8d8a?w=800&q=60&auto=format&fit=crop" alt="Canvas tote bag on display">
+          <h3>Canvas Tote</h3>
+          <p class="price">$24.00</p>
+          <button class="btn small" onclick="addToCart({id:'tote-01',name:'Canvas Tote',price:24})">Add</button>
+        </li>
+
+        <li class="card" data-title="Wool Beanie" data-price="18" data-id="beanie-01">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=60&auto=format&fit=crop" alt="Wool beanie on a mannequin head">
+          <h3>Wool Beanie</h3>
+          <p class="price">$18.00</p>
+          <button class="btn small" onclick="addToCart({id:'beanie-01',name:'Wool Beanie',price:18})">Add</button>
+        </li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="infoHeading" class="info">
+      <h2 id="infoHeading">Quick Facts</h2>
+      <table class="facts" summary="Quick facts about this demo site">
+        <caption>Site Quick Facts</caption>
+        <thead>
+          <tr><th scope="col">Feature</th><th scope="col">Status</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Responsive layout</td><td>Yes</td></tr>
+          <tr><td>Search (demo)</td><td>Client-side</td></tr>
+          <tr><td>Cart persistence</td><td>Local storage</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav aria-label="Footer links">
+        <ul class="footer-links">
+          <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">WCAG</a></li>
+          <li><a href="https://developers.google.com/search/docs/essentials/seo-starter-guide" target="_blank" rel="noopener">Google SEO Guide</a></li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="year"></span> Fashion Shop 2025 — Demo site • <a href="https://github.com/username/projectname" target="_blank" rel="noopener">GitHub repo</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
