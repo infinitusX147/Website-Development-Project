@@ -1,8 +1,10 @@
+/* GENERAL */
 body {
     font-family: Arial, sans-serif;
     background: #f5f5f5;
     margin: 0;
     padding: 0;
+    line-height: 1.5;
 }
 
 /* HEADER */
@@ -11,12 +13,13 @@ body {
     align-items: center;
     gap: 40px;
     padding: 20px;
+    flex-wrap: wrap;
 }
 
 .logo {
     background: #9bc9b8;
     padding: 30px 50px;
-    border-radius: 8px;
+    border-radius: 12px;
     font-weight: bold;
     font-size: 24px;
 }
@@ -24,6 +27,7 @@ body {
 .nav-menu ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .nav-menu li {
@@ -37,11 +41,13 @@ body {
     border-radius: 8px;
     text-decoration: none;
     color: #000;
+    font-size: 16px;
 }
 
+/* SEARCH */
 .search-box input {
     padding: 15px;
-    width: 150px;
+    width: 170px;
     border-radius: 8px;
     border: 1px solid #ccc;
     background: #cda7e3;
@@ -52,8 +58,8 @@ body {
     background: #e68d1e;
     padding: 20px 30px;
     width: fit-content;
-    margin-left: 40px;
-    border-radius: 10px;
+    margin: 30px 40px;
+    border-radius: 12px;
 }
 
 .subpage-link {
@@ -65,15 +71,16 @@ body {
     border-radius: 6px;
     text-decoration: none;
     color: black;
+    font-weight: bold;
 }
 
 /* PRODUCT SECTION */
 .product-section {
-    margin-top: 40px;
-    margin-left: 40px;
+    margin: 40px;
     display: flex;
     gap: 40px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .product-image {
@@ -85,6 +92,7 @@ body {
 
 .product-info h3 {
     margin: 0;
+    font-size: 26px;
 }
 
 .price {
@@ -93,9 +101,25 @@ body {
 }
 
 .add-to-cart {
-    padding: 10px 20px;
+    padding: 12px 26px;
     background: #38c5cb;
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    font-size: 16px;
+}
+
+/* CART MESSAGE */
+.cart-message {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .product-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
