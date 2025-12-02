@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Fashion Shop 2025</title>
+  <meta name="description" content="About Fashion Shop 2025 — demo ecommerce project for practice.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="logo" href="index.html" aria-label="Fashion Shop 2025 homepage"><img src="https://via.placeholder.com/160x48?text=LOGO" alt="Fashion Shop 2025 logo"></a>
+      <button id="menuToggleAbout" class="menu-toggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle navigation">☰</button>
+      <nav id="primaryNav" class="primary-nav" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li><a href="shop.html">shop</a></li>
+          <li><a href="about.html" aria-current="page">about</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="cart.html">cart (<span id="cartCountAbout">0</span>)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <h1>About This Project</h1>
+    <p>This is a practice e-commerce site created to demonstrate layout, accessibility, and basic front-end behaviors for a class project.</p>
+
+    <h2>Implementation Notes</h2>
+    <ol>
+      <li>Semantic HTML (header, main, footer, nav).</li>
+      <li>Accessible search field and skip link.</li>
+      <li>Cart simulated using localStorage and client-side JS.</li>
+      <li>Responsive and mobile-friendly layout.</li>
+    </ol>
+
+    <h2>External Resources</h2>
+    <ul>
+      <li><a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility" target="_blank" rel="noopener">MDN Accessibility</a></li>
+      <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">WCAG Guidelines</a></li>
+      <li><a href="https://developers.google.com/search/docs/essentials/seo-starter-guide" target="_blank" rel="noopener">Google SEO Guide</a></li>
+    </ul>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <nav aria-label="Footer links">
+        <ul class="footer-links">
+          <li><a href="https://developer.mozilla.org/" target="_blank" rel="noopener">MDN Web Docs</a></li>
+          <li><a href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank" rel="noopener">WCAG</a></li>
+          <li><a href="https://validator.w3.org/" target="_blank" rel="noopener">HTML Validator</a></li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="yearAbout"></span> Fashion Shop 2025 — Demo site</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
